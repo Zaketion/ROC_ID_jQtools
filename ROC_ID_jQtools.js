@@ -17,15 +17,6 @@ function ROC_check_ID(ROC_ID,return_type){
         alert('身分證字號為空值！');
         exit();
     }
-    var ID_eng_char = ROC_ID.substr(0,1);
-    var ID_num_data = ROC_ID.substr(1); //從第2位擷取到最後
-    var ID_eng_num = Convert_Letter_to_Num(ID_eng_char);
-    var ID_all_num =  ID_eng_num + ID_num_data;
-    var num_result = Validate_ID(ID_all_num);
-    var validate_reult_num = num_result % 10;
-    
-    //return_type == bool返回true/false
-    //return_type == alert則跳出alert
     
     //防止return_type沒有送值
     if (return_type == null)
@@ -33,8 +24,16 @@ function ROC_check_ID(ROC_ID,return_type){
         return_type = 'bool';
     }
     
+    var ID_eng_char = ROC_ID.substr(0,1);
+    var ID_num_data = ROC_ID.substr(1); //從第2位擷取到最後
+    var ID_eng_num = Convert_Letter_to_Num(ID_eng_char);
+    var ID_all_num =  ID_eng_num + ID_num_data;
+    var validate_result = Validate_ID(ID_all_num);
+
     //返回結果
-        if (validate_reult_num == 0)
+    //return_type == bool返回true/false
+    //return_type == alert則跳出alert
+        if (validate_result)
         {
             if(return_type == 'alert')
             {
@@ -128,7 +127,15 @@ function Validate_ID(ID_num_format)
         num_now_ans = num_now * num_now_times;
         total = total + num_now_ans;
     }
-    return total;
+    var num_remain = total % 10;
+    if (num_remain == 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 //驗證乘法表
