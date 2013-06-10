@@ -9,10 +9,10 @@
  
  */
 
-function ROC_ID_check(ROC_ID_num,return_type){
+function ROC_ID_check(ROC_ID_string,return_type){
     
     //檢查是否為空
-    if (ROC_ID_num == null || ROC_ID_num == '')
+    if (ROC_ID_string == null || ROC_ID_string == '')
     {
         alert('身分證字號為空值！');
         exit();
@@ -24,8 +24,8 @@ function ROC_ID_check(ROC_ID_num,return_type){
         return_type = 'bool';
     }
     
-    var ID_eng_char = ROC_ID_num.substr(0,1);
-    var ID_num_data = ROC_ID_num.substr(1); //從第2位擷取到最後
+    var ID_eng_char = ROC_ID_string.substr(0,1);
+    var ID_num_data = ROC_ID_string.substr(1); //從第2位擷取到最後
     var ID_eng_num = Convert_Letter_to_Num(ID_eng_char);
     var ID_all_num =  ID_eng_num + ID_num_data;
     var validate_result = Validate_ID(ID_all_num);
