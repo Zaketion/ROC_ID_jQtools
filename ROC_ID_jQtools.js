@@ -1,11 +1,11 @@
 /*
- ROC ID Validator 台灣身分證字號驗證
+ ROC ID jQtools 台灣身分證字號工具
  
  本專案為GPL授權，歡迎使用。
  
- 如有任何問題，請洽詢作者ET Wu
+ 如有任何問題，請洽詢作者ET Wu http://profile.lazur.me
  
- 本專案GitHub
+ 或直上本專案GitHub: https://github.com/etwu/ROC_ID_jQtools
  
  */
 
