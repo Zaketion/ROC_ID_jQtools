@@ -1,5 +1,4 @@
-## ROC ID jQtools
-## 台灣身分證字號工具（jQuery版本）
+## ROC ID jQtools 台灣身分證字號工具（jQuery）
 ================
 ### 功能及使用方式
 
