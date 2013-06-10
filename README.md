@@ -1,10 +1,10 @@
-ROC_ID_Validator
+ROC_ID_jQtools
 ================
 
-台灣身分證字號驗證工具（jQuery）
+台灣身分證字號工具（jQuery）
 
-## 簡介
-支援bool回傳/直接跳出alert的台灣身分證字號驗證工具。
+## 功能
+1.台灣身分證字號驗證（支援bool回傳結果/直接跳出alert）
 
 ### 授權方式
 本專案採用GPL授權，詳細內容請參考gpl.txt
