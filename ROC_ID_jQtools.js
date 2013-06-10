@@ -10,6 +10,13 @@
  */
 
 function ROC_check_ID(ROC_ID,return_type){
+    
+    //檢查是否為空
+    if (ROC_ID == null || ROC_ID == '')
+    {
+        alert('身分證字號為空值！');
+        exit();
+    }
     var ID_eng_char = ROC_ID.substr(0,1);
     var ID_num_data = ROC_ID.substr(1); //從第2位擷取到最後
     var ID_eng_num = Convert_Letter_to_Num(ID_eng_char);
