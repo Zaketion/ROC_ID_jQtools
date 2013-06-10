@@ -1,7 +1,7 @@
 ROC_ID_jQtools
 ================
 
-台灣身分證字號工具（jQuery）
+台灣身分證字號工具（jQuery版本）
 
 ## 功能
 1.台灣身分證字號驗證（example1：傳回bool, example2：跳出alert）
