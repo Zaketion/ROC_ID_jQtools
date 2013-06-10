@@ -7,24 +7,32 @@
     <script type="text/javascript" src="ROC_ID_jQtools.js"></script>
     <script>
     $(function() {
-        var ROC_ID = 'A123456789';
+        $('#check_id').click(function(){
+            check_id();
+        });
+    });
+    
+    function check_id()
+    {
+        var ROC_ID = $('#id_1').val();
         var result = ROC_check_ID(ROC_ID);
         if (result == true)
         {
-            alert(ROC_ID + ' 有效！');
+            $('#check_result').html(ROC_ID + ' 有效！');
         }
         else
         {
-            alert(ROC_ID + ' 無效！');
+            $('#check_result').html(ROC_ID + ' 無效！');
         }
-    });
+    }
     </script>
 	<title>PageTitle</title>
 </head>
 
 <body>
-
-
+<p><input type="text" id="id_1" name="id_1" value="A123456789" /></p>
+<p><input type="button" id="check_id" value="檢查"/></p>
+<div id="check_result">請點擊「檢查」按鈕</div>
 
 </body>
 </html>
