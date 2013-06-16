@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="ROC_ID_jQtools.js"></script>
+    <script>
+    $(function() {
+        $('#gen_id').click(function(){
+            make_id();
+        });
+    });
+    
+    function make_id()
+    {
+        var ROC_ID = $('#id_1').val();
+        var result = ROC_ID_Generator(ROC_ID);
+        $('#check_result').html(result);
+    }
+    </script>
+	<title>PageTitle</title>
+</head>
+
+<body>
+<p><input type="text" id="id_1" name="id_1" value="A012" />(可不填或填入任意長度的「英文+數字」字串)</p>
+<p><input type="button" id="gen_id" value="產生/補完"/></p>
+<div id="check_result">請點擊「產生/補完」按鈕</div>
+
+</body>
+</html>
