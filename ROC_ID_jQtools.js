@@ -3,7 +3,7 @@
  
 本專案GitHub: https://github.com/etwu/ROC_ID_jQtools
 
-GPL授權，歡迎使用。
+MIT授權，歡迎使用。
  
  */
 
