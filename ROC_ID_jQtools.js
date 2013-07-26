@@ -180,8 +180,18 @@ function ROC_ID_Generator(ID_string)
     {}
     for(var i=0;i < remain_long;i++)
     {
-        var randomnumber=Math.floor(Math.random()*10);
+        //性別代號產生修正//
+        if (remain_long == 8 && i == 0)
+        {
+            var GenderCode = Pick_a_GenderCode();
+            ID_no_verify_code = ID_no_verify_code + GenderCode;
+        //性別代號產生修正-END//
+        }else{
+            var randomnumber=Math.floor(Math.random()*10);
         ID_no_verify_code = ID_no_verify_code + randomnumber.toString();
+        }
+        
+        
     }
     //長度不足，則補齊數字
     
@@ -227,11 +237,20 @@ function ROC_ID_Generator(ID_string)
 //***產生子function***//
 function Pick_a_Char()
 {
-    var Eng_Chars = "ABCDEFGHIJKMNOPQTUVWXZ"; //已拿掉不再分發字母
+    var Eng_Chars = "ABCDEFGHIJKMNOPQTUVWXZ"; //縣市英文,已拿掉不再分發字母
     var Eng_Chars_Array = Eng_Chars.split("");
     var Random_seed = Math.floor(Math.random() * Eng_Chars_Array.length);
     var Eng_Output = Eng_Chars_Array[Random_seed];
     return Eng_Output;
+}
+
+function Pick_a_GenderCode()
+{
+    var Gcode_Chars = "0129"; //性別代號
+    var Gcode_Chars_Array = Gcode_Chars.split("");
+    var Random_seed = Math.floor(Math.random() * Gcode_Chars_Array.length);
+    var Gcode_Output = Gcode_Chars_Array[Random_seed];
+    return Gcode_Output;
 }
 
 
