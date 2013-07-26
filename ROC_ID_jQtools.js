@@ -143,7 +143,7 @@ function ROC_ID_Generator(ID_string)
     if (data_length == 0)
     {
         //直接產生
-        //第一碼數字
+        //第一碼的英文
         var Num_Eng = Check_Letter_to_Num(Pick_a_Char());
         var remain_long = 8; //剩餘長度（不含驗證碼） 8位數
         var ID_no_verify_code = Num_Eng;
@@ -158,8 +158,6 @@ function ROC_ID_Generator(ID_string)
         var data_remain_length = data_remain.length;
         var remain_long = 8 - data_remain_length;
         ID_no_verify_code = Num_Eng + data_remain;
-        
-    
     }
     else if(data_length == 10)
     {
