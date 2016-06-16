@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="ROC ID jQtools : ROC ID jQtools 台灣身分證字號jQuery工具">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>ROC ID jQtools</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/etwu/ROC_ID_jQtools">View on GitHub</a>
+
+          <h1 id="project_title">ROC ID jQtools</h1>
+          <h2 id="project_tagline">ROC ID jQtools 台灣身分證字號jQuery工具</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/etwu/ROC_ID_jQtools/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/etwu/ROC_ID_jQtools/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="關於本工具" class="anchor" href="#%E9%97%9C%E6%96%BC%E6%9C%AC%E5%B7%A5%E5%85%B7" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>關於本工具</h3>
+
+<p>簡單的說，本工具是一個符合國際/國內標準，並可以用於驗證、產生、補完jQuery身分證字號小工具。</p>
+
+<h3>
+<a id="本工具的特色" class="anchor" href="#%E6%9C%AC%E5%B7%A5%E5%85%B7%E7%9A%84%E7%89%B9%E8%89%B2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>本工具的特色</h3>
+
+<ul>
+<li>符合ISO 5218 / CNS 8381標準<br>
+</li>
+</ul>
+
+<p>本工具符合<strong>國際標準化組織ISO 5218</strong>的人類性別表示法與<em>《中華民國國家標準》CNS 8381</em>之《資訊交換-人類性別表示法》所制定之性別表示標準。</p>
+
+<ul>
+<li>身分證字號性別規範</li>
+</ul>
+
+<p>根據以上標準，目前性別代號分別為：0（不明）,1（男性）,2（女性）,9（不適用）。</p>
+
+<ul>
+<li>身分證字號「補完」功能</li>
+</ul>
+
+<p>您可以只輸入「部分」的身分證字號，程式將會使用公式產生後面的數字。例：你可以僅輸入「A012」,程式將會吐出「A012387360」這樣的有效格式。</p>
+
+<h3>
+<a id="功能及使用方式" class="anchor" href="#%E5%8A%9F%E8%83%BD%E5%8F%8A%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>功能及使用方式</h3>
+
+<ul>
+<li>
+<p>台灣身分證字號驗證</p>
+
+<p><code>ROC_ID_check('ID_STRING_HERE','bool');</code> //可回傳True or False驗證結果.(bool可省略)</p>
+
+<p><code>ROC_ID_check('ID_STRING_HERE','alert');</code> //直接跳出alert提示驗證結果.</p>
+</li>
+<li>
+<p>台灣身分證字號產生</p>
+
+<p><code>ROC_ID_Generator();</code> //可回傳依據驗證公式產生的身分證字號(回傳字串)</p>
+</li>
+<li>
+<p>台灣身分證字號補完</p>
+
+<p><code>ROC_ID_Generator('A012');</code> //可輸入部分身分證字號將後面字號補完(回傳字串)</p>
+</li>
+</ul>
+
+<h3>
+<a id="常見qa" class="anchor" href="#%E5%B8%B8%E8%A6%8Bqa" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>常見Q&amp;A</h3>
+
+<p>Q.可以適用於目前的身分證字號（有性別的）格式嗎？</p>
+
+<p>A.當然可以，因為驗證公式原本就沒有考慮性別因素，而產生字號的部份，可以使用「補完」功能，帶入「英文數字+1」或「英文數字+2」的方式讓程式產生後面的數字。</p>
+
+<p>Q.台灣的身分證字號是根據這些規定來的，但是怎麼沒看過有人用呢？</p>
+
+<p>A.沒錯，台灣的身分證字號的性別代碼是根據ISO5218 / CNS8381這兩個標準所制定的，但是因為我們的公家機關是性別盲，並沒有注意到其他性別與「不想在字號上揭露性別」的人考慮進去，所以這是他們要努力的地方。</p>
+
+<h3>
+<a id="授權方式" class="anchor" href="#%E6%8E%88%E6%AC%8A%E6%96%B9%E5%BC%8F" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>授權方式</h3>
+
+<p>本專案採用MIT授權，詳細內容請參考licence.txt</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">ROC ID jQtools maintained by <a href="https://github.com/etwu">etwu</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
