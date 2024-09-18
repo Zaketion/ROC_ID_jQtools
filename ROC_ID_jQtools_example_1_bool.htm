@@ -36,3 +36,19 @@
 
 </body>
 </html>
+// 引入 ROC ID jQtools
+// <script src="path/to/ROC_ID_jQtools.js"></script>
+
+function validateRange(prefix, start, end) {
+    let validIDs = [];
+    for (let i = start; i <= end; i++) {
+        let id = prefix + i.toString().padStart(5, '0') + '26';
+        if (ROC_ID_check(id, 'bool')) {
+            validIDs.push(id);
+        }
+    }
+    return validIDs;
+}
+
+let validIDs = validateRange('F22', 0, 99999);
+console.log(validIDs);
